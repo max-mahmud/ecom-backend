@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser')
 require('dotenv').config()
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://frontend-nu-tawny.vercel.app'],
+  origin: ['http://localhost:3000', 'https://frontend-nu-tawny.vercel.app', 'https://dashboard-teal-nine.vercel.app'],
   credentials: true
 }))
 app.use(bodyParser.json())
@@ -28,7 +28,7 @@ app.use("/api", require("./routes/bannerRoutes"));
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-const port = process.env.PORT 
+const port = process.env.PORT
 
 dbConnect()
 app.listen(port, () => console.log(`Server is running on port ${port}!`))
