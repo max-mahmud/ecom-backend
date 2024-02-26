@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser')
 require('dotenv').config()
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001'],
+  origin: ['http://localhost:3000', 'https://frontend-nu-tawny.vercel.app'],
   credentials: true
 }))
 app.use(bodyParser.json())
